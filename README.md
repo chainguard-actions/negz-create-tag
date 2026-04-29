@@ -1,6 +1,12 @@
 # negz/create-tag
 
-Hardened GitHub Action by [Chainguard](https://www.chainguard.dev).
+Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at [https://github.com/negz/create-tag](https://github.com/negz/create-tag).
+
+## Versions
+
+| Version | Tag | Upstream commit |
+|---------|-----|-----------------|
+| v1 | [`v1`](https://github.com/chainguard-actions/create-tag/tree/v1) | — |
 
 ## Privacy
 
