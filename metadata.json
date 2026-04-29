@@ -1,5 +1,6 @@
 {
   "owner": "negz",
   "name": "create-tag",
-  "visibility": ""
+  "visibility": "internal",
+  "description": "Create a git tag!"
 }
