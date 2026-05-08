@@ -2,5 +2,6 @@
   "owner": "negz",
   "name": "create-tag",
   "visibility": "internal",
-  "description": "Create a git tag!"
+  "description": "Create a git tag!",
+  "block_publish": false
 }
