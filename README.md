@@ -1,6 +1,6 @@
 # negz/create-tag
 
-Create a git tag!
+Tag a git commit with a semantic version
 
 Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at [https://github.com/negz/create-tag](https://github.com/negz/create-tag).
 
