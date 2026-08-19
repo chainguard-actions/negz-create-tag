@@ -1,14 +1,37 @@
-# negz/create-tag
+# create-tag
 
-Tag a git commit with a semantic version
+A GitHub Action to tag a commit with a valid semantic version.
 
-Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at [https://github.com/negz/create-tag](https://github.com/negz/create-tag).
+For example:
 
-## Versions
+```yaml
+name: Tag
 
-| Version | Tag | Upstream commit |
-|---------|-----|-----------------|
-| v1 | [`v1`](https://github.com/chainguard-actions/negz-create-tag/tree/v1) | — |
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (e.g. v0.1.0)'
+        required: true
+      message:
+        description: 'Tag message'
+        required: true
+
+jobs:
+  create-tag:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Create Tag
+        uses: negz/create-tag@v1
+        with:
+          version: ${{ github.event.inputs.version }}
+          message: ${{ github.event.inputs.message }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+```
 
 ## Privacy
 
