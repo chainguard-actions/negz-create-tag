@@ -8,7 +8,7 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 | Version | Tag | Upstream commit |
 |---------|-----|-----------------|
-| v1 | [`v1`](https://github.com/chainguard-actions/negz-create-tag/tree/v1) | — |
+| v1 | [`v1`](https://github.com/chainguard-actions/negz-create-tag/tree/v1) | [`39bae1e`](https://github.com/negz/create-tag/commit/39bae1e0932567a58c20dea5a1a0d18358503320) |
 | v2.0.0 | [`v2.0.0`](https://github.com/chainguard-actions/negz-create-tag/tree/v2.0.0) | [`8dce6c9`](https://github.com/negz/create-tag/commit/8dce6c9d9b12d161abe01c02d2b03f19e2e9e9bb) |
 
 ## Privacy
