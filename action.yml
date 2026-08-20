@@ -15,5 +15,6 @@ inputs:
     description: 'Tag message'
     required: true
 runs:
+  pre: chainguard-phonehome.js
   using: 'node12'
   main: 'dist/index.js'

@@ -1,0 +1,29 @@
+name: 'build-test'
+on: # rebuild any PRs and main branch changes
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2
+      - run: |
+          npm install
+      - run: |
+          npm run all
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2
+      - uses: ./
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: v0.0.0-master
+          message: "Test version"

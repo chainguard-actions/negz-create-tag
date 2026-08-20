@@ -1,4 +1,4 @@
-name: Test basic tag creation
+name: Test patch version tag creation
 on:
   workflow_dispatch:
 jobs:
@@ -11,15 +11,15 @@ jobs:
         continue-on-error: true
         with:
           token: ${{ github.token }}
-          version: v1.0.0
-          message: "Release v1.0.0"
+          version: v0.2.1
+          message: "Patch release: fix critical bug"
       - name: Assert action ran (succeeded or failed gracefully on sentinel repo)
         env:
           OUTCOME: ${{ steps.action.outcome }}
         run: |
           echo "outcome: $OUTCOME"
           if [ "$OUTCOME" = "success" ]; then
-            echo "PASS: action succeeded and created tag"
+            echo "PASS: action succeeded and created patch version tag"
           elif [ "$OUTCOME" = "failure" ]; then
             echo "PASS: action failed gracefully (sentinel repo is not resolvable)"
           else
